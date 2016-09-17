@@ -6,6 +6,8 @@ export default Relay.createContainer(App, {
     workTimes: () => Relay.QL`
       fragment on WorkTime @relay(plural: true) {
         id,
+        start_time,
+        minutes
       }
     `,
   },

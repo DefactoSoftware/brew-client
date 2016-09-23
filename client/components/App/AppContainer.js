@@ -3,10 +3,10 @@ import App from './AppComponent';
 
 export default Relay.createContainer(App, {
   fragments: {
-    workTimes: () => Relay.QL`
-      fragment on WorkTime @relay(plural: true) {
+    workTime: () => Relay.QL`
+      fragment on WorkTime {
         id,
-        start_time,
+        startTime,
         minutes
       }
     `,

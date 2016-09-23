@@ -3,14 +3,15 @@ import styles from './App.scss';
 
 export default class App extends React.Component {
   static propTypes = {
-    workTimes: React.PropTypes.array
+    workTime: React.PropTypes.object
   };
 
   render() {
-    const { workTimes } = this.props;
+    const { workTime } = this.props;
+
     return (
       <div className={styles.root}>
-        {workTimes.map(({ id }) => id).join(', ')}
+        {Object.keys(workTime).map(k => workTime[k])}
       </div>
     );
   }

@@ -6,4 +6,4 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-nodemon --watch server/data/**/*.js --exec "babel-node server/index.js"
+nodemon --watch server/data/**/*.js --exec "babel-node server/index.js" $1
